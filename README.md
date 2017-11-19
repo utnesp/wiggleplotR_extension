@@ -1,5 +1,7 @@
 # wiggleplotR_extension
 
+Below follows a cookbook recipe on how to plot a gene and its transcripts by adding functions to the wiggleplotr package.
+It is simple in that you only need to add a gene name. Just copy-paste the code
 
 
 ```R
@@ -101,7 +103,7 @@ plotWiggle <- function(gene, log2.transform = F, prior.count = NULL, plot.princi
 
 ```
 
-To plot, you need to set up track_data as described in [Introduction to wiggleplotr](https://bioconductor.org/packages/devel/bioc/vignettes/wiggleplotr/inst/doc/wiggleplotr.html)
+To plot, you need to set up track_data as described in [Introduction to wiggleplotr.](https://bioconductor.org/packages/devel/bioc/vignettes/wiggleplotr/inst/doc/wiggleplotr.html)
 It is a data.frame consisting of colnames sample_id, condition, scaling_factor (num), bigWig (path to your BigWig files).
 
 Then you set up your track_data:
