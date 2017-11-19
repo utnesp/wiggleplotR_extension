@@ -1,8 +1,23 @@
 # wiggleplotR_extension
 
 Below follows a cookbook recipe on how to plot a gene and its transcripts by adding functions to the wiggleplotr package.
-It is simple in that you only need to add a gene name. Just copy-paste the code
+It is simple in that you only need to add a gene name. To use the extension, do:
 
+```R
+source_https <- function(url, ...) {
+  # load package
+  require(RCurl)
+ 
+  # parse and evaluate each .R script
+  sapply(c(url, ...), function(u) {
+    eval(parse(text = getURL(u, followlocation = TRUE, cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl"))), envir = .GlobalEnv)
+  })
+}
+
+source_https("https://github.com/utnesp/wiggleplotR_extension/raw/master/wiggleplotR_extension.R")
+```
+
+Or copy paste the below code:
 
 ```R
 library(scales)
