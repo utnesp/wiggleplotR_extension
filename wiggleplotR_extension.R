@@ -4,11 +4,6 @@ library(GenomicRanges)
 library(GenomicFeatures)
 library(biomaRt)
 
-
-###########################################################################################
-####################################    CREATE PLOTTING FUNCTIONS #########################
-###########################################################################################
-
 ext_name2wiggleplotr.metadata <- function(ext_name, biomart = mart, combine = F, df2 = "", by.x = "gene_name", by.y = "external_gene_name", all = F){
     df <- getBM(
         filters= "external_gene_name",
