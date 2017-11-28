@@ -121,7 +121,7 @@ plotWiggle <- function(gene, log2.transform = F, prior.count = NULL, plot.princi
 To plot, you need to set up track_data as described in [Introduction to wiggleplotr.](https://bioconductor.org/packages/devel/bioc/vignettes/wiggleplotr/inst/doc/wiggleplotr.html)
 It is a data.frame consisting of colnames sample_id, condition, scaling_factor (num), bigWig (path to your BigWig files).
 
-Then you set up your track_data:
+Example on how to set up your track_data:
 
 ```R
 track_data = dplyr::mutate(sample_data, track_id = condition, colour_group = condition)
